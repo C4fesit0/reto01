@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,24 +6,23 @@ import { Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  cities = ['Barcelona', 'Madrid', 'Lima', 'Quito'];
+  name!: string;
+  selection!: string;
+  criterio:string = '';
 
-  cities : string[] = ['Buenos Aires','Madrir','Amsterdam','Londres']
-  name!:string;
-  selection!:string;
+  title = 'Día 12 del reto';
+  url = 'https://carconfigurator.ferrari.com/assets/cars/portofinom/packages/default/car-ferrari-portofino-m_splash.jpg';
 
-  title:string= 'Dia 9 del reto';
-  url:string = 'www.google.com';
-
-  addNewCity(city:string):void{
+  addNewCity(city: string): void {
     this.cities.push(city);
   }
-
-
-  onCityClicked(city:string): void{
+  onCityClicked(city: string): void {
     this.selection = city;
   }
 
-  onClear():void{
-    this.selection="";
+  onClear(): void {
+    this.selection = '';
   }
+
 }
