@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
     name:'',
     checkAdult: false,
     department: '',
-    comment: '...',
+    comment: '',
   }
 
   constructor() { }
